@@ -1,3 +1,7 @@
+import type { IconType } from "react-icons";
+import { SiGithub, SiGitlab } from "react-icons/si";
+import { FaMicrosoft } from "react-icons/fa";
+
 const stats = [
   { label: "Vistas de perfil (ultimos 7 dias)", value: "87" },
   { label: "Impresiones de publicaciones recientes", value: "4" },
@@ -14,6 +18,27 @@ const coreSkills = [
   "Linux",
   "GitHub/GitLab",
   "Frontend accesible",
+];
+
+const logoShowcase = [
+  {
+    icon: FaMicrosoft,
+    label: "Microsoft",
+    link: "https://www.credly.com/badges/cfd69vj67khp",
+    description: "Security, Compliance & Identity Fundamentals",
+  },
+  {
+    icon: SiGithub,
+    label: "GitHub",
+    link: "https://github.com/Nayyy",
+    description: "Repos open-source y colaboraciones",
+  },
+  {
+    icon: SiGitlab,
+    label: "GitLab",
+    link: "https://gitlab.com/Nayyy",
+    description: "Integraciones con CI/CD y pipelines Kotlin",
+  },
 ];
 
 const experiences = [
@@ -120,6 +145,37 @@ export function Landing() {
               {skill}
             </span>
           ))}
+        </div>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-4 pb-12 sm:px-6 lg:px-8">
+        <div className="rounded-3xl border border-black/10 bg-white/70 p-6 text-foreground shadow-lg backdrop-blur-sm">
+          <header className="flex flex-col gap-1">
+            <h2 className="text-xl font-semibold tracking-tight">Logos y herramientas de confianza</h2>
+            <p className="text-sm text-foreground/70">
+              Represento certificaciones y comunidades con las que colaboro o para las que he
+              desarrollado.
+            </p>
+          </header>
+          <div className="mt-4 grid grid-cols-3 gap-4 text-center text-sm sm:grid-cols-5">
+            {logoShowcase.map((logo) => {
+              const Icon = logo.icon as IconType;
+              return (
+                <a
+                  href={logo.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={logo.label}
+                  className="flex flex-col items-center gap-1 rounded-2xl border border-black/10 px-3 py-4 text-foreground/80 transition hover:border-foreground hover:text-foreground"
+                  aria-label={`${logo.label}: ${logo.description}`}
+                >
+                  <Icon className="text-2xl sm:text-3xl" aria-hidden />
+                  <span className="text-xs uppercase tracking-[0.25em]">{logo.label}</span>
+                  <span className="text-[0.6rem] text-foreground/60">{logo.description}</span>
+                </a>
+              );
+            })}
+          </div>
         </div>
       </section>
 
