@@ -1,6 +1,5 @@
 "use client";
 
-import type { IconType } from "react-icons";
 import { SiGithub, SiGitlab, SiAnthropic, SiJavascript } from "react-icons/si";
 import { FaMicrosoft } from "react-icons/fa";
 
@@ -74,6 +73,7 @@ const unifiedCertifications = [
 ];
 
 import { ProjectCard } from "./ProjectCard";
+import { ArticlesHero } from "./ArticlesHero";
 import { SiKotlin, SiReact, SiTailwindcss, SiPostgresql, SiSpringboot, SiDocker } from "react-icons/si";
 
 const projects = [
@@ -116,7 +116,7 @@ export function Landing() {
   return (
     <main id="inicio" className="flex-1">
       {/* ... (Hero section existing code) */}
-      <section className="mx-auto grid w-full max-w-7xl gap-10 px-4 py-12 sm:px-6 md:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:px-8 lg:py-16">
+      <section className="section-container grid gap-10 py-12 md:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:py-16">
         <div className="space-y-6">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground/60">
             Nayra Rios · Developer
@@ -152,7 +152,7 @@ export function Landing() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 rounded-3xl border border-foreground/10 bg-background/80 p-6 shadow-lg backdrop-blur-sm">
+        <div className="flex flex-col gap-4 glass-card p-6">
           <div>
             <p className="text-xs uppercase text-foreground/60">Contacta</p>
             <p className="text-lg font-medium text-foreground">hola@nayri.dev</p>
@@ -168,7 +168,9 @@ export function Landing() {
         </div>
       </section>
 
-      <section id="proyectos" className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <ArticlesHero />
+
+      <section id="proyectos" className="section-container py-12">
         <header className="mb-10 flex flex-col gap-1">
           <h2 className="text-3xl font-bold tracking-tight text-foreground">Proyectos Destacados</h2>
           <p className="text-foreground/70">
@@ -182,7 +184,7 @@ export function Landing() {
         </div>
       </section>
 
-      <section id="experiencia" className="mx-auto w-full max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+      <section id="experiencia" className="section-container pb-12">
         <header className="flex flex-col gap-1 text-center">
           <h2 className="text-xl font-semibold tracking-tight text-foreground">Experiencia</h2>
           <p className="text-sm text-foreground/70">
@@ -193,7 +195,7 @@ export function Landing() {
           {experiences.map((exp) => (
             <article
               key={exp.company}
-              className="flex w-full max-w-2xl flex-col gap-3 rounded-2xl border border-foreground/10 bg-background/70 p-5 shadow-sm backdrop-blur"
+              className="flex w-full max-w-2xl flex-col gap-3 glass-card p-5"
             >
               <div className="flex items-center justify-between">
                 <p className="text-sm font-semibold text-foreground">{exp.company}</p>
@@ -209,7 +211,7 @@ export function Landing() {
         </div>
       </section>
 
-      <section id="educacion" className="mx-auto w-full max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+      <section id="educacion" className="section-container pb-12">
         <header className="flex flex-col gap-1">
           <h2 className="text-xl font-semibold tracking-tight text-foreground">Educación</h2>
           <p className="text-sm text-foreground/70">
@@ -220,7 +222,7 @@ export function Landing() {
           {education.map((edu) => (
             <div
               key={edu.degree}
-              className="flex flex-col gap-2 rounded-2xl border border-foreground/10 bg-background/70 p-5 shadow-sm backdrop-blur"
+              className="flex flex-col gap-2 glass-card p-5"
             >
               <div className="flex items-center justify-between">
                 <p className="text-sm font-semibold text-foreground">{edu.school}</p>
@@ -233,7 +235,7 @@ export function Landing() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <section className="section-container pb-16">
         <header className="flex flex-col gap-1">
           <h2 className="text-xl font-semibold tracking-tight text-foreground">Certificaciones y Herramientas</h2>
           <p className="text-sm text-foreground/70">
@@ -244,7 +246,7 @@ export function Landing() {
           {unifiedCertifications.map((cert) => (
             <div
               key={cert.title}
-              className="group flex flex-col gap-3 rounded-2xl border border-foreground/10 bg-background/60 p-5 text-sm text-foreground shadow-sm transition-all hover:border-foreground/20 hover:shadow-md backdrop-blur"
+              className="group flex flex-col gap-3 glass-card p-5 text-sm text-foreground transition-all hover:border-foreground/20 hover:shadow-md"
             >
               <div className="flex items-center justify-between">
                 {cert.icon && (
@@ -264,7 +266,7 @@ export function Landing() {
           ))}
         </div>
       </section>
-      <section id="contacto" className="mx-auto w-full max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <section id="contacto" className="section-container py-20">
         <div className="relative overflow-hidden rounded-[3rem] border border-foreground/10 bg-foreground/[0.02] px-6 py-16 text-center shadow-2xl backdrop-blur-3xl sm:px-12">
           {/* Background decoration */}
           <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-foreground/[0.05] blur-3xl" />
