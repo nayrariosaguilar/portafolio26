@@ -116,59 +116,35 @@ export function Landing() {
   return (
     <main id="inicio" className="flex-1">
       {/* ... (Hero section existing code) */}
-      <section className="section-container grid gap-10 py-12 md:py-14 lg:grid-cols-[1.15fr_0.85fr] lg:py-16">
-        <div className="space-y-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground/60">
-            Nayra Rios · Developer
-          </p>
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Impulsando la innovación con código seguro, accesible y multiplataforma.
-          </h1>
-          <p className="max-w-prose text-base text-foreground/75 sm:text-lg">
-            Soy Nayra, una desarrolladora apasionada por Java y Kotlin basada en Barcelona. Actualmente, 
-            compagino mi rol en GIA ROBOTICS con mi formación en ciberseguridad, buscando siempre el 
-            equilibrio entre funcionalidad y robustez en cada proyecto que construyo.
-          </p>
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href="#contacto"
-              className="rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition hover:opacity-90 sm:text-base"
-            >
-              Hablemos
-            </a>
-            <a
-              href="https://www.linkedin.com/in/nayrariosaguilar"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-full border border-foreground/15 px-5 py-2.5 text-sm font-semibold transition hover:bg-foreground/5 sm:text-base"
-            >
-              Conectar en LinkedIn
-            </a>
-          </div>
-          <p className="text-sm text-foreground/70">
-            Enfocada en el nexo entre el desarrollo multiplataforma y la seguridad. 
-            Formando parte de una red de más de 500 profesionales con quienes comparto la 
-            visión de una web más segura para todos.
-          </p>
-        </div>
-
-        <div className="flex flex-col gap-4 glass-card p-6">
-          <div>
-            <p className="text-xs uppercase text-foreground/60">Contacta</p>
-            <p className="text-lg font-medium text-foreground">hola@nayri.dev</p>
-            <p className="text-xs text-foreground/70">LinkedIn publico</p>
-          </div>
-          <div className="grid gap-3 text-sm text-foreground/80">
-            <p className="text-base font-semibold text-foreground">Compartir nuevas ideas</p>
-            <p>
-              Discutamos automatizacion, seguridad en la nube o construccion de pipelines con
-              Kotlin y React.
+      <section className="section-container py-6 md:py-8 lg:py-10">
+        <div className="grid gap-10 lg:grid-cols-[1fr_1fr] items-center">
+          <div className="space-y-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground/60">
+              Nayra Rios · Developer & DevOps
             </p>
+            <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl leading-tight">
+              ¿Interesado? Mira mis últimos proyectos, estoy buscando desafíos.
+            </h1>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="#contacto"
+                className="rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition hover:opacity-90 sm:text-base"
+              >
+                Hablemos
+              </a>
+              <a
+                href="https://www.linkedin.com/in/nayrariosaguilar"
+                target="_blank"
+                rel="noreferrer"
+                className="rounded-full border border-foreground/15 px-5 py-2.5 text-sm font-semibold transition hover:bg-foreground/5 sm:text-base"
+              >
+                Conectar en LinkedIn
+              </a>
+            </div>
           </div>
+          <ArticlesHero className="w-full" />
         </div>
       </section>
-
-      <ArticlesHero />
 
       <section id="proyectos" className="section-container py-12">
         <header className="mb-10 flex flex-col gap-1">
@@ -180,57 +156,6 @@ export function Landing() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
-          ))}
-        </div>
-      </section>
-
-      <section id="experiencia" className="section-container pb-12">
-        <header className="flex flex-col gap-1 text-center">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">Experiencia</h2>
-          <p className="text-sm text-foreground/70">
-            Mi trayectoria profesional en el desarrollo de software.
-          </p>
-        </header>
-        <div className="mt-6 flex justify-center">
-          {experiences.map((exp) => (
-            <article
-              key={exp.company}
-              className="flex w-full max-w-2xl flex-col gap-3 glass-card p-5"
-            >
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-foreground">{exp.company}</p>
-                <p className="text-xs uppercase tracking-[0.2em] text-foreground/60">{exp.role}</p>
-              </div>
-              <div className="flex flex-col gap-1">
-                <p className="text-xs text-foreground/60">{exp.dates}</p>
-                {exp.type && <p className="text-[10px] font-medium text-foreground/40">{exp.type}</p>}
-              </div>
-              <p className="text-sm text-foreground/75 leading-relaxed">{exp.summary}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="educacion" className="section-container pb-12">
-        <header className="flex flex-col gap-1">
-          <h2 className="text-xl font-semibold tracking-tight text-foreground">Educación</h2>
-          <p className="text-sm text-foreground/70">
-            Formación académica técnica en desarrollo y sistemas.
-          </p>
-        </header>
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          {education.map((edu) => (
-            <div
-              key={edu.degree}
-              className="flex flex-col gap-2 glass-card p-5"
-            >
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-foreground">{edu.school}</p>
-                <p className="text-xs text-foreground/60">{edu.dates}</p>
-              </div>
-              <p className="text-sm text-foreground/80 leading-snug">{edu.degree}</p>
-              {edu.note && <p className="text-xs font-medium text-foreground/60">{edu.note}</p>}
-            </div>
           ))}
         </div>
       </section>
