@@ -1,9 +1,10 @@
 import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#proyectos", label: "Proyectos" },
-  { href: "#contacto", label: "Contacto" },
+  { href: "/#inicio", label: "Inicio" },
+  { href: "/#proyectos", label: "Proyectos" },
+  { href: "/#contacto", label: "Contacto" },
+  { href: "/agendar-videollamada", label: "Agendar" },
 ];
 
 export function Navbar() {
@@ -28,10 +29,10 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <a
-            href="#contacto"
+            href="/agendar-videollamada"
             className="rounded-full border border-foreground/15 px-4 py-2 text-sm font-medium transition hover:bg-foreground/5 sm:text-base"
           >
-            Hablemos
+            Agendar
           </a>
         </div>
       </div>
