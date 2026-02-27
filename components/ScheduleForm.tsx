@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function ScheduleForm() {
+  const t = useTranslations('ScheduleForm');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,10 +32,10 @@ export default function ScheduleForm() {
       if (data.success) {
         setMeetLink(data.meetLink);
       } else {
-        setError(data.error || 'Ocurrió un error');
+        setError(data.error || t('errorGeneric'));
       }
     } catch (err) {
-      setError('Error al conectar con el servidor');
+      setError(t('errorServer'));
     } finally {
       setLoading(false);
     }
@@ -41,10 +43,10 @@ export default function ScheduleForm() {
 
   return (
     <section className="p-6 max-w-md mx-auto bg-white dark:bg-zinc-900 rounded-xl shadow-md space-y-4 border border-zinc-200 dark:border-zinc-800">
-      <h2 className="text-2xl font-bold">Agendar Reunión</h2>
+      <h2 className="text-2xl font-bold">{t('title')}</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium">Nombre</label>
+          <label className="block text-sm font-medium">{t('name')}</label>
           <input
             required
             type="text"
@@ -54,7 +56,7 @@ export default function ScheduleForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium">Email</label>
+          <label className="block text-sm font-medium">{t('email')}</label>
           <input
             required
             type="email"
@@ -64,7 +66,7 @@ export default function ScheduleForm() {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium">Fecha y Hora</label>
+          <label className="block text-sm font-medium">{t('dateTime')}</label>
           <input
             required
             type="datetime-local"
@@ -78,14 +80,14 @@ export default function ScheduleForm() {
           disabled={loading}
           className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 disabled:opacity-50"
         >
-          {loading ? 'Agendando...' : 'Confirmar Reunión'}
+          {loading ? t('submitting') : t('submit')}
         </button>
       </form>
 
       {meetLink && (
         <div className="mt-4 p-4 bg-green-100 text-green-800 rounded">
-          <p className="font-bold">¡Agendado!</p>
-          <p className="text-sm">Recibirás un correo con la invitación y el link de Meet:</p>
+          <p className="font-bold">{t('success')}</p>
+          <p className="text-sm">{t('successDetail')}</p>
           <a href={meetLink} target="_blank" className="underline font-mono text-xs break-all">
             {meetLink}
           </a>

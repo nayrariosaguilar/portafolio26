@@ -1,0 +1,16 @@
+{
+  "name": "Nayra Rios | Full Stack & DevOps",
+  "short_name": "Nayri Dev",
+  "description": "Portfolio of Nayra Rios, Full Stack Developer and DevOps Engineer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

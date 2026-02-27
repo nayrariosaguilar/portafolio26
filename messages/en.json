@@ -1,0 +1,73 @@
+{
+  "Metadata": {
+    "title": "Nayra Rios | Full Stack Developer & DevOps Engineer",
+    "description": "Portfolio of Nayra Rios, Full Stack Developer specialized in Kotlin, React, Next.js, and CI/CD security. Expert in automation and scalable solutions.",
+    "keywords": "Nayra Rios, Nayri Dev, Software Developer, DevOps Engineer, Kotlin, React, Next.js, Cybersecurity, CI/CD, Freelance Developer",
+    "ogTitle": "Nayra Rios | Full Stack Developer & DevOps Engineer",
+    "ogDescription": "Check out my software development and security projects. Specialist in Kotlin, React, and pipeline automation."
+  },
+  "Navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact",
+    "schedule": "Schedule"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "en": "English",
+    "es": "Spanish"
+  },
+  "Landing": {
+    "summary": {
+      "title": "Professional Profile",
+      "content": "Software Developer with a hybrid focus between Full Stack development and DevOps engineering. Specialized in building robust applications with Kotlin (Spring Boot) and React/Next.js, with a strong emphasis on security throughout the development lifecycle (DevSecOps). My experience ranges from microservices architecture to cloud deployment automation, always striving for efficiency and scalability."
+    },
+    "hero": {
+      "subtitle": "Nayra Rios · Developer & DevOps",
+      "title": "Interested? Check out my latest projects, I'm looking for challenges.",
+      "ctaSchedule": "Schedule Meeting",
+      "ctaLinkedIn": "Connect on LinkedIn"
+    },
+    "projects": {
+      "title": "Featured Projects",
+      "subtitle": "A selection of my most recent work in development and security."
+    },
+    "certs": {
+      "title": "Certifications and Tools",
+      "subtitle": "Credentials and platforms that support my focus on security, collaboration, and quality.",
+      "issued": "Issued: {date}"
+    },
+    "contact": {
+      "title": "Have an idea in mind?",
+      "subtitle": "Book a call or send me an email to start working together.",
+      "ctaSchedule": "Schedule Video Call",
+      "copied": "Copied!"
+    },
+    "floatingCta": "Schedule video call",
+    "floatingCtaShort": "Schedule"
+  },
+  "Footer": {
+    "rights": "(c) {year} Nayri Dev. All rights reserved."
+  },
+  "Schedule": {
+    "metadataTitle": "Schedule Video Call",
+    "metadataDescription": "Schedule a 1-hour meeting with me on my Google Calendar.",
+    "title": "Book a video call",
+    "description": "Select a date and time that works for you to talk about your project or just get to know each other.",
+    "duration": "60-minute meeting",
+    "meet": "Google Meet included",
+    "confirmation": "Immediate confirmation"
+  },
+  "ScheduleForm": {
+    "title": "Schedule Meeting",
+    "name": "Name",
+    "email": "Email",
+    "dateTime": "Date and Time",
+    "submit": "Confirm Meeting",
+    "submitting": "Scheduling...",
+    "success": "Scheduled!",
+    "successDetail": "You will receive an email with the invitation and the Meet link:",
+    "errorGeneric": "An error occurred",
+    "errorServer": "Error connecting to server"
+  }
+}

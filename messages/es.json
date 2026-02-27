@@ -1,0 +1,73 @@
+{
+  "Metadata": {
+    "title": "Nayra Rios | Full Stack Developer & DevOps Engineer",
+    "description": "Portafolio de Nayra Rios, desarrolladora Full Stack especializada en Kotlin, React, Next.js y seguridad CI/CD. Experta en automatización y soluciones escalables.",
+    "keywords": "Nayra Rios, Nayri Dev, Software Developer, DevOps Engineer, Kotlin, React, Next.js, Ciberseguridad, CI/CD, Freelance Developer",
+    "ogTitle": "Nayra Rios | Full Stack Developer & DevOps Engineer",
+    "ogDescription": "Mira mis proyectos de desarrollo de software y seguridad. Especialista en Kotlin, React y automatización de pipelines."
+  },
+  "Navbar": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "schedule": "Agendar"
+  },
+  "LocaleSwitcher": {
+    "label": "Cambiar idioma",
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "Landing": {
+    "summary": {
+      "title": "Perfil Profesional",
+      "content": "Desarrolladora de Software con un enfoque híbrido entre el desarrollo Full Stack y la ingeniería DevOps. Especializada en la creación de aplicaciones robustas con Kotlin (Spring Boot) y React/Next.js, con un fuerte énfasis en la seguridad en el ciclo de vida de desarrollo (DevSecOps). Mi experiencia abarca desde la arquitectura de microservicios hasta la automatización de despliegues en la nube, siempre buscando la eficiencia y la escalabilidad."
+    },
+    "hero": {
+      "subtitle": "Nayra Rios · Developer & DevOps",
+      "title": "¿Interesado? Mira mis últimos proyectos, estoy buscando desafíos.",
+      "ctaSchedule": "Agendar Reunión",
+      "ctaLinkedIn": "Conectar en LinkedIn"
+    },
+    "projects": {
+      "title": "Proyectos Destacados",
+      "subtitle": "Una selección de mis trabajos más recientes en desarrollo y seguridad."
+    },
+    "certs": {
+      "title": "Certificaciones y Herramientas",
+      "subtitle": "Credenciales y plataformas que respaldan mi enfoque en seguridad, colaboración y calidad.",
+      "issued": "Expedición: {date}"
+    },
+    "contact": {
+      "title": "¿Tienes una idea en mente?",
+      "subtitle": "Reserva una llamada o envíame un email para empezar a trabajar juntos.",
+      "ctaSchedule": "Agendar Videollamada",
+      "copied": "¡Copiado!"
+    },
+    "floatingCta": "Agendar videollamada",
+    "floatingCtaShort": "Agendar"
+  },
+  "Footer": {
+    "rights": "(c) {year} Nayri Dev. Todos los derechos reservados."
+  },
+  "Schedule": {
+    "metadataTitle": "Agendar Videollamada",
+    "metadataDescription": "Agenda una reunión de 1 hora conmigo en mi Google Calendar.",
+    "title": "Reserva una videollamada",
+    "description": "Selecciona una fecha y hora que te venga bien para hablar sobre tu proyecto o simplemente conocernos.",
+    "duration": "Reunión de 60 minutos",
+    "meet": "Google Meet incluido",
+    "confirmation": "Confirmación inmediata"
+  },
+  "ScheduleForm": {
+    "title": "Agendar Reunión",
+    "name": "Nombre",
+    "email": "Email",
+    "dateTime": "Fecha y Hora",
+    "submit": "Confirmar Reunión",
+    "submitting": "Agendando...",
+    "success": "¡Agendado!",
+    "successDetail": "Recibirás un correo con la invitación y el link de Meet:",
+    "errorGeneric": "Ocurrió un error",
+    "errorServer": "Error al conectar con el servidor"
+  }
+}

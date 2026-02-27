@@ -6,7 +6,8 @@ import { ProjectCard } from "./ProjectCard";
 import { ArticlesHero } from "./ArticlesHero";
 import { HiClipboardDocument, HiCheck, HiEnvelope, HiCalendar } from "react-icons/hi2";
 import { useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const experiences = [
   {
@@ -103,6 +104,7 @@ const projects = [
 ];
 
 export function Landing() {
+  const t = useTranslations("Landing");
   const [copied, setCopied] = useState(false);
   const email = "hola@nayri.dev";
 
@@ -119,10 +121,10 @@ export function Landing() {
           <div className="grid gap-10 lg:grid-cols-[1fr_1fr] items-center">
             <div className="space-y-6">
               <p className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground/60">
-                Nayra Rios · Developer & DevOps
+                {t("hero.subtitle")}
               </p>
               <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl leading-tight">
-                ¿Interesado? Mira mis últimos proyectos, estoy buscando desafíos.
+                {t("hero.title")}
               </h1>
               <div className="flex flex-wrap items-center gap-3">
                 <Link
@@ -130,7 +132,7 @@ export function Landing() {
                   className="flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition hover:opacity-90 sm:text-base"
                 >
                   <HiCalendar className="text-lg" />
-                  Agendar Reunión
+                  {t("hero.ctaSchedule")}
                 </Link>
                 <a
                   href="https://www.linkedin.com/in/nayrariosaguilar"
@@ -138,7 +140,7 @@ export function Landing() {
                   rel="noreferrer"
                   className="rounded-full border border-foreground/15 px-5 py-2.5 text-sm font-semibold transition hover:bg-foreground/5 sm:text-base"
                 >
-                  Conectar en LinkedIn
+                  {t("hero.ctaLinkedIn")}
                 </a>
               </div>
             </div>
@@ -146,11 +148,20 @@ export function Landing() {
           </div>
         </section>
 
+        <section className="section-container py-12 border-y border-foreground/5 bg-foreground/[0.01]">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-bold tracking-tight text-foreground mb-4">{t("summary.title")}</h2>
+            <p className="text-lg text-foreground/80 leading-relaxed">
+              {t("summary.content")}
+            </p>
+          </div>
+        </section>
+
         <section id="proyectos" className="section-container py-12">
           <header className="mb-10 flex flex-col gap-1">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground">Proyectos Destacados</h2>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground">{t("projects.title")}</h2>
             <p className="text-foreground/70">
-              Una seleccion de mis trabajos mas recientes en desarrollo y seguridad.
+              {t("projects.subtitle")}
             </p>
           </header>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
@@ -162,9 +173,9 @@ export function Landing() {
 
         <section className="section-container pb-16">
           <header className="flex flex-col gap-1">
-            <h2 className="text-xl font-semibold tracking-tight text-foreground">Certificaciones y Herramientas</h2>
+            <h2 className="text-xl font-semibold tracking-tight text-foreground">{t("certs.title")}</h2>
             <p className="text-sm text-foreground/70">
-              Credenciales y plataformas que respaldan mi enfoque en seguridad, colaboracion y calidad.
+              {t("certs.subtitle")}
             </p>
           </header>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -184,7 +195,7 @@ export function Landing() {
                 <div>
                   <p className="font-semibold leading-tight">{cert.title}</p>
                   <p className="mt-1 text-xs text-foreground/60">{cert.issuer}</p>
-                  {cert.date && <p className="text-[10px] text-foreground/50">Expedicion: {cert.date}</p>}
+                  {cert.date && <p className="text-[10px] text-foreground/50">{t("certs.issued", {date: cert.date})}</p>}
                   {cert.id && <p className="text-[10px] text-foreground/40 mt-1">ID: {cert.id}</p>}
                 </div>
               </div>
@@ -199,9 +210,9 @@ export function Landing() {
             
             <div className="relative z-10 mx-auto max-w-2xl space-y-12">
               <header className="space-y-4">
-                <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">¿Tienes una idea en mente?</h2>
+                <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">{t("contact.title")}</h2>
                 <p className="text-lg text-foreground/70">
-                  Reserva una llamada o envíame un email para empezar a trabajar juntos.
+                  {t("contact.subtitle")}
                 </p>
               </header>
 
@@ -212,7 +223,7 @@ export function Landing() {
                     className="flex items-center gap-3 rounded-2xl bg-[#1e6ad5] px-8 py-4 font-semibold text-white transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg"
                   >
                     <HiCalendar className="text-xl" />
-                    Agendar Videollamada
+                    {t("contact.ctaSchedule")}
                   </Link>
                   <button
                     onClick={copyToClipboard}
@@ -225,7 +236,7 @@ export function Landing() {
                     </div>
                     {copied && (
                       <div className="absolute inset-0 flex items-center justify-center bg-foreground text-sm font-bold text-background animate-in fade-in zoom-in duration-300">
-                        ¡Copiado!
+                        {t("contact.copied")}
                       </div>
                     )}
                   </button>
@@ -261,8 +272,8 @@ export function Landing() {
         className="fixed bottom-6 right-6 z-[60] flex items-center gap-2 rounded-full bg-[#1e6ad5] px-6 py-3 font-semibold text-white shadow-2xl transition-all hover:scale-105 active:scale-95 sm:px-8 sm:py-4"
       >
         <HiCalendar className="text-xl" />
-        <span className="hidden sm:inline">Agendar videollamada</span>
-        <span className="sm:hidden">Agendar</span>
+        <span className="hidden sm:inline">{t("floatingCta")}</span>
+        <span className="sm:hidden">{t("floatingCtaShort")}</span>
       </Link>
     </div>
   );
