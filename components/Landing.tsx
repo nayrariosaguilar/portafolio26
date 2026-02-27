@@ -1,10 +1,10 @@
 "use client";
 
-import { SiGithub, SiGitlab, SiAnthropic, SiJavascript, SiKotlin, SiReact, SiTailwindcss, SiPostgresql, SiSpringboot, SiDocker } from "react-icons/si";
+import { SiGithub, SiGitlab, SiAnthropic, SiJavascript, SiKotlin, SiReact, SiTailwindcss, SiPostgresql, SiSpringboot, SiDocker, SiAmazonwebservices, SiOpenai } from "react-icons/si";
 import { FaMicrosoft } from "react-icons/fa";
 import { ProjectCard } from "./ProjectCard";
 import { ArticlesHero } from "./ArticlesHero";
-import { HiClipboardDocument, HiCheck, HiEnvelope, HiCalendar } from "react-icons/hi2";
+import { HiClipboardDocument, HiCheck, HiEnvelope, HiCalendar, HiSparkles } from "react-icons/hi2";
 import { useState } from "react";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
@@ -35,6 +35,13 @@ const education = [
 ];
 
 const unifiedCertifications = [
+  {
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    date: "feb. 2026",
+    icon: SiAmazonwebservices,
+    color: "#FF9900",
+  },
   {
     title: "Claude Code in Action",
     issuer: "Anthropic",
@@ -70,15 +77,20 @@ const unifiedCertifications = [
     issuer: "Colaboraciones y Repos",
     icon: SiGithub,
   },
-  {
-    title: "GitLab CI/CD",
-    issuer: "Pipelines Kotlin",
-    icon: SiGitlab,
-    color: "#FC6D26",
-  },
 ];
 
 const projects = [
+  {
+    title: "Clawbot Productivity Suite",
+    description: "Sistema personal de productividad que sincroniza Google Calendar, horas de estudio, pomodoro y timers en una interfaz unificada.",
+    image: "/globe.svg",
+    link: "https://github.com/Nayyy",
+    technologies: [
+      { name: "Kimi 2.5/Claude", icon: HiSparkles, color: "#10b981" },
+      { name: "React", icon: SiReact, color: "#61DAFB" },
+      { name: "Node.js", icon: SiOpenai, color: "#4169E1" },
+    ],
+  },
   {
     title: "GIA Robotics Dashboard",
     description: "Panel de control en tiempo real para la gestion de flotas de robots industriales.",
