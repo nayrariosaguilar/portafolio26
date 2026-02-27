@@ -1,5 +1,4 @@
 import ScheduleForm from '@/components/ScheduleForm';
-import { useTranslations } from 'next-intl';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
@@ -15,7 +14,7 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
 export default async function AgendarPage({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
   setRequestLocale(locale);
-  const t = useTranslations('Schedule');
+  const t = await getTranslations('Schedule');
   
   return (
     <div className="min-h-screen py-20 px-4">
