@@ -69,5 +69,11 @@
     "successDetail": "Recibirás un correo con la invitación y el link de Meet:",
     "errorGeneric": "Ocurrió un error",
     "errorServer": "Error al conectar con el servidor"
+  },
+  "Chatbot": {
+    "title": "Asistente",
+    "placeholder": "Escribe un mensaje...",
+    "welcome": "¡Hola! Soy la asistente virtual de Nayra. ¿En qué puedo ayudarte hoy?",
+    "send": "Enviar"
   }
 }

@@ -7,6 +7,7 @@ import {getMessages, setRequestLocale, getTranslations} from 'next-intl/server';
 import {routing} from '@/i18n/routing';
 import {notFound} from 'next/navigation';
 import StructuredData from "@/components/StructuredData";
+import Chatbot from "@/components/Chatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -95,6 +96,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             {children}
+            <Chatbot />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
