@@ -9,8 +9,7 @@
   "Navbar": {
     "home": "Home",
     "projects": "Projects",
-    "contact": "Contact",
-    "schedule": "Schedule"
+    "contact": "Contact"
   },
   "LocaleSwitcher": {
     "label": "Change language",
@@ -25,7 +24,6 @@
     "hero": {
       "subtitle": "Nayra Rios · Developer & DevOps",
       "title": "Interested? Check out my latest projects, I'm looking for challenges.",
-      "ctaSchedule": "Schedule Meeting",
       "ctaLinkedIn": "Connect on LinkedIn"
     },
     "projects": {
@@ -39,41 +37,32 @@
     },
     "contact": {
       "title": "Have an idea in mind?",
-      "subtitle": "Book a call or send me an email to start working together.",
-      "ctaSchedule": "Schedule Video Call",
+      "subtitle": "Use the virtual assistant or send me an email to start working together.",
       "copied": "Copied!"
-    },
-    "floatingCta": "Schedule video call",
-    "floatingCtaShort": "Schedule"
+    }
   },
   "Footer": {
     "rights": "(c) {year} Nayri Dev. All rights reserved."
   },
-  "Schedule": {
-    "metadataTitle": "Schedule Video Call",
-    "metadataDescription": "Schedule a 1-hour meeting with me on my Google Calendar.",
-    "title": "Book a video call",
-    "description": "Select a date and time that works for you to talk about your project or just get to know each other.",
-    "duration": "60-minute meeting",
-    "meet": "Google Meet included",
-    "confirmation": "Immediate confirmation"
-  },
-  "ScheduleForm": {
-    "title": "Schedule Meeting",
-    "name": "Name",
-    "email": "Email",
-    "dateTime": "Date and Time",
-    "submit": "Confirm Meeting",
-    "submitting": "Scheduling...",
-    "success": "Scheduled!",
-    "successDetail": "You will receive an email with the invitation and the Meet link:",
-    "errorGeneric": "An error occurred",
-    "errorServer": "Error connecting to server"
-  },
   "Chatbot": {
     "title": "Assistant",
-    "placeholder": "Type a message...",
-    "welcome": "Hi! I'm Nayra's virtual assistant. How can I help you today?",
-    "send": "Send"
+    "welcome": "Hi! I'm Nayra's assistant. How can I help you?",
+    "optionSchedule": "Schedule video call",
+    "optionCall": "Schedule phone call",
+    "optionAsk": "Ask me something",
+    "scheduleInfo": "Fill in the form below to book a 60-minute video call with Google Meet.",
+    "callComingSoon": "This feature is coming soon! In the meantime, you can schedule a video call or email hola@nayri.dev.",
+    "askInfo": "Type your question below. I can answer about studies, skills, certifications, availability, and more.",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formDateTime": "Date and Time",
+    "formSubmit": "Confirm Meeting",
+    "formSubmitting": "Scheduling...",
+    "formSuccess": "Meeting scheduled! You'll receive an email with the Meet link:",
+    "formError": "Could not schedule the meeting. Please try again.",
+    "askPlaceholder": "Ask about skills, experience, certifications...",
+    "askSend": "Send",
+    "askNoResult": "I couldn't find information about that. Try asking about studies, skills, certifications, or availability.",
+    "back": "Back to menu"
   }
 }

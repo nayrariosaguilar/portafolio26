@@ -9,8 +9,7 @@
   "Navbar": {
     "home": "Inicio",
     "projects": "Proyectos",
-    "contact": "Contacto",
-    "schedule": "Agendar"
+    "contact": "Contacto"
   },
   "LocaleSwitcher": {
     "label": "Cambiar idioma",
@@ -25,7 +24,6 @@
     "hero": {
       "subtitle": "Nayra Rios · Developer & DevOps",
       "title": "¿Interesado? Mira mis últimos proyectos, estoy buscando desafíos.",
-      "ctaSchedule": "Agendar Reunión",
       "ctaLinkedIn": "Conectar en LinkedIn"
     },
     "projects": {
@@ -39,41 +37,32 @@
     },
     "contact": {
       "title": "¿Tienes una idea en mente?",
-      "subtitle": "Reserva una llamada o envíame un email para empezar a trabajar juntos.",
-      "ctaSchedule": "Agendar Videollamada",
+      "subtitle": "Usa el asistente virtual o envíame un email para empezar a trabajar juntos.",
       "copied": "¡Copiado!"
-    },
-    "floatingCta": "Agendar videollamada",
-    "floatingCtaShort": "Agendar"
+    }
   },
   "Footer": {
     "rights": "(c) {year} Nayri Dev. Todos los derechos reservados."
   },
-  "Schedule": {
-    "metadataTitle": "Agendar Videollamada",
-    "metadataDescription": "Agenda una reunión de 1 hora conmigo en mi Google Calendar.",
-    "title": "Reserva una videollamada",
-    "description": "Selecciona una fecha y hora que te venga bien para hablar sobre tu proyecto o simplemente conocernos.",
-    "duration": "Reunión de 60 minutos",
-    "meet": "Google Meet incluido",
-    "confirmation": "Confirmación inmediata"
-  },
-  "ScheduleForm": {
-    "title": "Agendar Reunión",
-    "name": "Nombre",
-    "email": "Email",
-    "dateTime": "Fecha y Hora",
-    "submit": "Confirmar Reunión",
-    "submitting": "Agendando...",
-    "success": "¡Agendado!",
-    "successDetail": "Recibirás un correo con la invitación y el link de Meet:",
-    "errorGeneric": "Ocurrió un error",
-    "errorServer": "Error al conectar con el servidor"
-  },
   "Chatbot": {
     "title": "Asistente",
-    "placeholder": "Escribe un mensaje...",
-    "welcome": "¡Hola! Soy la asistente virtual de Nayra. ¿En qué puedo ayudarte hoy?",
-    "send": "Enviar"
+    "welcome": "¡Hola! Soy la asistente de Nayra. ¿En qué puedo ayudarte?",
+    "optionSchedule": "Agendar videollamada",
+    "optionCall": "Agendar llamada",
+    "optionAsk": "Pregúntame algo",
+    "scheduleInfo": "Rellena el formulario para reservar una videollamada de 60 minutos con Google Meet.",
+    "callComingSoon": "Esta función estará disponible pronto. Mientras tanto, puedes agendar una videollamada o escribir a hola@nayri.dev.",
+    "askInfo": "Escribe tu pregunta abajo. Puedo responder sobre estudios, habilidades, certificaciones, disponibilidad y más.",
+    "formName": "Nombre",
+    "formEmail": "Email",
+    "formDateTime": "Fecha y Hora",
+    "formSubmit": "Confirmar Reunión",
+    "formSubmitting": "Agendando...",
+    "formSuccess": "¡Reunión agendada! Recibirás un correo con el enlace de Meet:",
+    "formError": "No se pudo agendar la reunión. Inténtalo de nuevo.",
+    "askPlaceholder": "Pregunta sobre habilidades, experiencia, certificaciones...",
+    "askSend": "Enviar",
+    "askNoResult": "No encontré información sobre eso. Prueba a preguntar sobre estudios, habilidades, certificaciones o disponibilidad.",
+    "back": "Volver al menú"
   }
 }

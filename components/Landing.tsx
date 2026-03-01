@@ -4,9 +4,8 @@ import { SiGithub, SiGitlab, SiAnthropic, SiJavascript, SiKotlin, SiReact, SiTai
 import { FaMicrosoft } from "react-icons/fa";
 import { ProjectCard } from "./ProjectCard";
 import { ArticlesHero } from "./ArticlesHero";
-import { HiClipboardDocument, HiCheck, HiEnvelope, HiCalendar, HiSparkles } from "react-icons/hi2";
+import { HiClipboardDocument, HiCheck, HiEnvelope, HiSparkles } from "react-icons/hi2";
 import { useState } from "react";
-import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 
 const experiences = [
@@ -139,13 +138,6 @@ export function Landing() {
                 {t("hero.title")}
               </h1>
               <div className="flex flex-wrap items-center gap-3">
-                <Link
-                  href="/agendar-videollamada"
-                  className="flex items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition hover:opacity-90 sm:text-base"
-                >
-                  <HiCalendar className="text-lg" />
-                  {t("hero.ctaSchedule")}
-                </Link>
                 <a
                   href="https://www.linkedin.com/in/nayrariosaguilar"
                   target="_blank"
@@ -230,13 +222,6 @@ export function Landing() {
 
               <div className="flex flex-col items-center justify-center gap-8">
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Link
-                    href="/agendar-videollamada"
-                    className="flex items-center gap-3 rounded-2xl bg-[#1e6ad5] px-8 py-4 font-semibold text-white transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg"
-                  >
-                    <HiCalendar className="text-xl" />
-                    {t("contact.ctaSchedule")}
-                  </Link>
                   <button
                     onClick={copyToClipboard}
                     className="group relative flex items-center gap-3 overflow-hidden rounded-2xl border border-foreground/10 bg-background/50 px-8 py-4 font-semibold text-foreground transition-all hover:scale-[1.02]"
@@ -278,15 +263,6 @@ export function Landing() {
         </section>
       </main>
 
-      {/* Floating Badge Widget */}
-      <Link
-        href="/agendar-videollamada"
-        className="fixed bottom-6 right-6 z-[60] flex items-center gap-2 rounded-full bg-[#1e6ad5] px-6 py-3 font-semibold text-white shadow-2xl transition-all hover:scale-105 active:scale-95 sm:px-8 sm:py-4"
-      >
-        <HiCalendar className="text-xl" />
-        <span className="hidden sm:inline">{t("floatingCta")}</span>
-        <span className="sm:hidden">{t("floatingCtaShort")}</span>
-      </Link>
     </div>
   );
 }

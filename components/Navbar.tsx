@@ -12,7 +12,6 @@ export function Navbar() {
     { href: "/#inicio", label: t("home") },
     { href: "/#proyectos", label: t("projects") },
     { href: "/#contacto", label: t("contact") },
-    { href: "/agendar-videollamada", label: t("schedule") },
   ];
 
   return (
@@ -36,12 +35,6 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <LocaleSwitcher />
           <ThemeToggle />
-          <Link
-            href="/agendar-videollamada"
-            className="rounded-full border border-foreground/15 px-4 py-2 text-sm font-medium transition hover:bg-foreground/5 sm:text-base"
-          >
-            {t("schedule")}
-          </Link>
         </div>
       </div>
     </header>

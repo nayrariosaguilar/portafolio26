@@ -1,6 +1,7 @@
 import { Footer } from "@/components/Footer";
 import { Landing } from "@/components/Landing";
 import { Navbar } from "@/components/Navbar";
+import Chatbot from "@/components/Chatbot";
 import {setRequestLocale} from 'next-intl/server';
 
 export default async function Home({params}: {params: Promise<{locale: string}>}) {
@@ -12,6 +13,7 @@ export default async function Home({params}: {params: Promise<{locale: string}>}
       <Navbar />
       <Landing />
       <Footer />
+      <Chatbot />
     </div>
   );
 }
